@@ -176,7 +176,7 @@ def year2018():
 @app.route('/detail/<articel_id>')
 def detail(articel_id):
     #游客每次点击阅读原文，阅读数加1
-    if session.get('user_id') <> 1:
+    if session.get('user_id') != 1:
         article1 = Article.query.filter(Article.id == articel_id).first()
         article1.read_times = article1.read_times + 1
         db.session.commit()
