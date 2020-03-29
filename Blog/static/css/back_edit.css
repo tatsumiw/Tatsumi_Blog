@@ -1,0 +1,47 @@
+
+.list-group {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    width:150px;
+    float: left;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+a {
+    color: 	#000000;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+
+.panel-body {
+    padding: 15px;
+    margin-left: 160px;
+    padding-top: 0;
+}
+
+.form-group1{
+    padding-bottom: 10px;
+    width: 100px;
+}
+
+.form-group2{
+    padding-bottom: 10px;
+}
+
+.form-group4{
+    padding: 10px;
+    text-align: center;
+}

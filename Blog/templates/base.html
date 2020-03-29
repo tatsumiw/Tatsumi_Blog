@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 网页小icon -->
+    <link href="{{ url_for('static',filename="images/touxiang.png") }}" rel="shortcut icon">
+    <!-- 网页小标签 -->
+    <title> Tatsumi_博客 | {% block title %}{% endblock %}</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 (http://v3.bootcss.com/getting-started/)-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- 导入自己写的css样式 -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+    <!--导入移动端样式-->
+    <meta name="viewport" content="width=1300">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <!-- 导航条 -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url_for('personal') }}">
+              <img class="touxiang" src="{{ url_for('static',filename="images/touxiang.png") }}" alt="" ></a>
+        </div>
+
+        <p class="navbar-text">
+            <font style="font-weight:bolder;font-size:18px;">Tatsumi_温毛</font><br/>
+            <font style="font-size:0.1px;" >&nbsp&nbsp追赶梦想中的自己</font></p>
+          
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="{{ url_for('index') }}">首页<span class="sr-only">(current)</span></a></li>
+
+          </ul>
+          <form class="navbar-form navbar-left" action="{{ url_for('search') }}" method="get">
+            <div class="form-group">
+              <input name="q"  type="text" class="form-control" placeholder="请输入关键字">
+            </div>
+            <button type="submit" class="btn btn-default">查找</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+              {% if user %}
+                <li><a href="{{ url_for('back_index') }}">温毛</a></li>
+                <li><a href="{{ url_for('logout') }}">注销</a></li>
+              {% else %}
+                <li><a href="{{ url_for('personal') }}">关于</a></li>
+                <li><a href="{{ url_for('login') }}">后台登录</a></li>
+              {% endif %}
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    {% block main %}
+    <!-- 文章内容盒子 -->
+
+    <!-- 脚注 -->
+
+    {% endblock main %}
+
+    {% block baocuo %}
+        {{ baocuo }}
+    {% endblock %}
+    </body>
+    </html>

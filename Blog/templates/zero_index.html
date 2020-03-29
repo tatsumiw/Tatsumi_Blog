@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}首页暂无文章{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+{% endblock head %}
+    <!-- 导航条 -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url_for('personal') }}">
+              <img class="touxiang" src="{{ url_for('static',filename="images/touxiang.png") }}" alt=""></a>
+        </div>
+        <p class="navbar-text">Tatsumi_温毛</p>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="{{ url_for('index') }}">首页<span class="sr-only">(current)</span></a></li>
+            <li><a href="{{ url_for('article') }}">文章</a></li>
+            <li><a href="{{ url_for('projects') }}">项目</a></li>
+            <li><a href="{{ url_for('life') }}">生活</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" action="{{ url_for('search') }}" method="get">
+            <div class="form-group">
+              <input name="q"  type="text" class="form-control" placeholder="请输入关键字">
+            </div>
+            <button type="submit" class="btn btn-default">查找</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+              {% if user %}
+                <li><a href="{{ url_for('back_index') }}">温毛</a></li>
+                <li><a href="{{ url_for('logout') }}">注销</a></li>
+              {% else %}
+                <li><a href="{{ url_for('login') }}">后台登录</a></li>
+              {% endif %}
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+{% block main %}
+    {% block biaoti %}{% endblock %}
+    <!-- 文章内容盒子 -->
+    <!-- start site's main content area -->
+    <main class="col-md-8 main-content">
+
+    {% for article in articles %}
+    <article id=108 class="post">
+
+
+        <div class="post-head">
+            <h1 class="post-title"><a >{{ article.title }}</a></h1>
+        <div class="post-meta">
+            <span class="author">作者：<a href="{{ url_for('personal') }}">温毛</a></span> &bull;
+            <time class="post-date" >{{ article.create_time }}</time>
+        </div>
+        </div>
+        <div class="post-content">
+            <p>{{ article.content|truncate(500)|safe }}</p>
+        </div>
+        <div class="post-permalink">
+                <a  href="{{ url_for('detail',articel_id = article.id) }}" class="btn btn-default" >阅读全文</a>
+            </div>
+
+
+        </article>
+
+    {% endfor %}
+
+
+
+
+    <footer>Copyright © 2017 by Tatsumi_温毛 </footer>
+
+    </main>
+
+
+<!-- 右侧热门文章盒子 -->
+<ul class="list-group">
+    <h4>热门文章 Top5</h4>
+
+    <a href="#" class="list-group-item">{{ '暂无文章' }}<span class="badge">{{ 0 }}</span></a>
+
+</ul>
+
+<!-- 右侧文章类别 -->
+<table class="table">
+  <caption>博文分类</caption>
+  <tbody>
+    <tr>
+      <td><a href="{{ url_for('article') }}">文章 ({{ 0 }})</a></td>
+    </tr>
+    <tr>
+      <td><a href="{{ url_for('projects') }}">项目 ({{ 0 }})</a></td>
+    </tr>
+      <tr>
+      <td><a href="{{ url_for('life') }}">生活 ({{ 0 }})</a></td>
+    </tr>
+  </tbody>
+</table>
+{% endblock main %}
+
+
+
+

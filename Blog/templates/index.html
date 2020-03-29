@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %}首页{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+{% endblock head %}
+
+{% import "_macros.html" as macros %}
+
+{% if pagination %}
+    {% block main %}
+        {% block biaoti %}{% endblock %}
+        <!-- 文章内容盒子 -->
+        <!-- start site's main content area -->
+        <main class="col-md-8 main-content">
+
+        {% for article in articles %}
+        <article id=108 class="post">
+
+
+            <div class="post-head">
+                <h1 class="post-title">
+                    <a >{{ article.title }}</a>
+                </h1>
+            <div class="post-meta">
+                <span class="category">分类：<a >{{ article.label }}</a></span> &bull;
+                <span class="author">作者：<a href="{{ url_for('personal') }}">温毛</a></span> &bull;
+                <time class="post-date" >{{ article.create_time }}</time>
+            </div>
+            </div>
+            <div class="post-content">
+                <p>{{ article.content|truncate(650)|safe }}</p>
+            </div>
+            <div class="post-permalink">
+                    <a  href="{{ url_for('detail',articel_id = article.id) }}" class="btn btn-default" >阅读全文</a>
+                </div>
+
+
+            </article>
+
+        {% endfor %}
+
+
+        <div class="pagination">
+        {{ macros.pagination_widget(pagination,'index') }}
+        </div>
+
+
+        <footer>Copyright © 2017 by Tatsumi_温毛 </footer>
+
+        </main>
+
+    <!-- 右侧动态盒子 -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tatsumi 最新动态</h3>
+        </div>
+        <div class="panel-body">
+            {{ activity }}
+        </div>
+    </div>
+
+
+    <!-- 右侧热门文章盒子 -->
+    <ul class="list-group">
+        <h4>阅读排行 Top5</h4>
+        {% for temp_num_read in num_read %}
+        <a href="{{ url_for('detail',articel_id=temp_num_read.id) }}" class="list-group-item">{{ temp_num_read.title }}<span class="badge">{{ temp_num_read.read_times }}</span></a>
+        {% endfor %}
+    </ul>
+
+    <!-- 右侧文章类别 -->
+    <table class="table">
+      <caption>博文分类</caption>
+      <tbody>
+        <tr>
+          <td><a href="{{ url_for('article') }}" >文章 | 随笔 ({{ num_article }})</a></td>
+        </tr>
+        <tr>
+          <td><a href="{{ url_for('projects') }}" >项目 | 实践 ({{ num_project }})</a></td>
+        </tr>
+          <tr>
+          <td><a href="{{ url_for('life') }}" >生活 | 感悟 ({{ num_life }})</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+<!-- 右侧时间归档 -->
+<table class="table">
+  <caption>时间归档</caption>
+  <tbody>
+    <tr>
+      <td><a href="{{ url_for('year2018') }}" >2018年 ({{num_2018}})</a></td>
+    </tr>
+    <tr>
+      <td><a href="{{ url_for('year2017') }}" >2017年 ({{num_2017}})</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<!-- 右侧Github二维码 -->
+<table class="table">
+    <img class="personal" src="{{ url_for('static',filename="images/github2wm.png") }}" alt="" style="width: 350px;
+    float: right;margin-right: 20px;" >
+</table>
+    {% endblock main %}
+{% endif  %}
+
+
+

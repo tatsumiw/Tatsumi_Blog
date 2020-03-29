@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}后台首页{% endblock %}
+
+<!-- 引入CSS样式 -->
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/back_index.css') }}">
+{% endblock %}
+
+{% block main %}
+<!-- 左侧固定小框 -->
+<ul class="list-group">
+    <li class="list-group-item"><a href="{{ url_for('back_index') }}">后台首页</a></li>
+    <li class="list-group-item"><a href="{{ url_for('back_dynamic') }}">博主动态</a></li>
+    <li class="list-group-item"><a href="{{ url_for('back_edit') }}">添加博文</a></li>
+    <li class="list-group-item"><a href="{{ url_for('back_list') }}">博文列表</a></li>
+
+</ul>
+
+<!-- 右侧固定文本小框 -->
+<div class="panel panel-default">
+<div class="panel-body">
+<!-- 动态文本小框 -->
+<form action="/back_dynamic" method="post">
+<div class="form-container">
+    <div class="form-group2">
+
+    <textarea class="form-control" rows="1" name="content" placeholder="Tatsumi动态" ></textarea>
+    </div>
+    <label for="name"></label>
+    <!-- 提交按钮 -->
+    <div class="form-group3">
+    <button type="submit" class="btn btn-primary ">提交</button>
+    </div>
+</div>
+</form>
+
+</div>
+</div>
+{% endblock main %}

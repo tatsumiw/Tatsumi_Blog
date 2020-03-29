@@ -1,0 +1,38 @@
+
+.list-group {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    width:150px;
+    float: left;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+a {
+    color: 	#000000;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+
+.panel-default {
+    border-color: #ddd;
+    margin-left: 180px;
+    margin-right: 20px;
+}
+
+h3{
+    margin-top: 0;
+    text-align: center;
+}

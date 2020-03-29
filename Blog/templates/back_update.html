@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}文章更新{% endblock %}
+
+<!-- 引入CSS样式 -->
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/back_edit.css') }}">
+    <title>A Simple Page with CKEditor</title>
+        <!-- 请确保CKEditor文件路径正确 -->
+        <script src="{{ url_for('static', filename='ckeditor/ckeditor.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+    <!-- 左侧固定小框 -->
+<ul class="list-group">
+    <li class="list-group-item"><a href="{{ url_for('back_index') }}">后台首页</a></li>
+    <li class="list-group-item"><a href="{{ url_for('back_edit') }}">添加博文</a></li>
+    <li class="list-group-item"><a href="{{ url_for('back_list') }}">博文列表</a></li>
+</ul>
+
+    <!-- 右侧文章大板块 -->
+<div class="panel-body">
+        <form action="" method="post">
+        <div class="form-container">
+                    <!-- 这是文章标签 -->
+            <div class="form-group1" >
+            <label for="name">文章标签</label>
+            <select class="form-control" name="label">
+                <option>{{ article1.label }}</option>
+                <option>文章</option>
+                <option>项目</option>
+                <option>生活</option>
+            </select>
+            </div>
+                    <!-- 这是文章标题 -->
+            <div class="form-group2">
+            <label for="name">文章标题</label>
+            <textarea class="form-control" rows="2" name="title">{{ article1.title }}</textarea>
+            </div>
+                    <!-- 这是富文本CKEditor编辑器 -->
+            <div>
+            <label for="name">文章内容</label>
+            <form method="post" action="" name="content">
+                    <textarea name="editor1" id="editor1" rows="10" cols="80" >{{ article1.content }}</textarea>
+                    <script>
+                        // 用CKEditor替换<textarea id="editor1">
+                        // 使用默认配置
+                        CKEDITOR.replace('editor1');
+                    </script>
+                </form>
+            </div>
+                    <!-- 提交按钮 -->
+            <div class="form-group4">
+                    <button type="submit" class="btn btn-primary ">更新提交</button>
+            </div>
+        </div>
+        </form>
+</div>
+{% endblock main %}             

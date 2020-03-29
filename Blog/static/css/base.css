@@ -1,0 +1,243 @@
+
+
+.touxiang{
+    width:50px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 00px 5px 00px 5px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.navbar-text {
+    float: left;
+    margin-right: 7px;
+    margin-left: 0;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.navbar-default .navbar-text {
+     color: #000000;
+}
+
+.navbar-default .navbar-text {
+     color: #000000;
+}
+
+.navbar-form {
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 30px;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+body{
+    background: #F0F0F0;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: auto;
+}
+
+.post {
+    padding: 35px;
+    background: #ffffff;
+    margin-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.post .post-head .post-title a {
+    color: #303030;
+}
+
+.h1, h1 {
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.post .post-head .post-title a:hover, .post .post-head .post-title a:focus {
+    text-decoration: none;
+}
+
+.post .post-head {
+    text-align: center;
+}
+
+
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin-top: 10px;
+}
+
+
+.col-md-4 {
+    width: 33.33333333%;
+}
+
+.sidebar .widget {
+    background: #ffffff;
+    padding: 21px 30px;
+}
+
+.widget {
+    margin-bottom: 35px;
+}
+
+.pagination {
+    margin: 0 0 35px;
+    text-align: right;
+    display: block;
+}
+
+.h1, h1 {
+    font-size: 25px;
+}
+
+footer {
+    padding-right: 120px;
+    margin: 10px;
+    margin-top: 100px;
+    margin-left: 500px;
+}
+
+.col-md-8 {
+    width: 70.66666667%;
+    padding-top: 0px;
+    padding-right: 5px;
+}
+
+.list-group {
+    width: 350px;
+    float: right;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.table {
+    width: 350px;
+    float: right;
+    margin-right: 20px;
+    background-color: white;
+}
+
+caption {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: inherit;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    padding-left: 10px;
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+    color: #303030;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight:bold
+}
+
+.list-group-item>.badge {
+    float: left;
+    margin-right: 8px;
+}
+
+
+a.list-group-item, button.list-group-item {
+    color: #555;
+}
+
+h4 {
+    font-size: 18px;
+    color: inherit;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.commenary-list li {
+    list-style: none;
+    border-bottom: 1px solid #ADADAD;
+    padding-top: 8px;
+}
+
+.commenary-list {
+    background: white;
+    padding-left: 20px;
+}
+
+.username{
+    font-size: 15px;
+    font-weight:bold
+}
+
+.creat_time{
+    padding-left: 15px;
+}
+
+.comment-content{
+    left: auto;
+}
+
+h2 {
+    font-size: 25px;
+    margin-left: 420px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    margin-bottom: 10px  ;
+}
+
+.panel-primary {
+    width: 350px;
+    float: right;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: white;
+    border-color: gray;
+}
+
+.panel-primary {
+    border-color: white;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+     color:  #303030;
+    font-weight: bold;;
+}

@@ -1,0 +1,53 @@
+
+.list-group {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    width:150px;
+    float: left;
+
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+a {
+    color: 	#000000;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+
+
+.table {
+    width: auto;
+    margin-bottom: 20px;
+    margin-left: 180px;
+    text-align: center;
+    float: left;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    background: #fff;
+    text-align: center;
+
+}
+
+caption {
+    padding-top: 0;
+    padding-bottom: 3px;
+    color:#000000;
+    text-align: center;
+    font-size : 1.2em;
+}

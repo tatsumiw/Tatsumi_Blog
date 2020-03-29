@@ -1,0 +1,27 @@
+使用环境 Ubuntu 
+         Python2.7
+		 
+Flask 基础教学        http://study.163.com/course/courseLearn.htm?courseId=1004091002#/learn/video?lessonId=1047958048&courseId=1004091002
+mysql安装             http://www.linuxidc.com/Linux/2016-03/129044.htm
+
+mysql 报错 mysql报错：error while loading shared libraries: libaio.so.1: cannot open shared object file: No such file or directory
+sudo apt-get install libaio1
+sudo apt-get update
+
+mysql启动
+mysql -uroot -p
+mysql建表 
+create database blog charset utf8;
+
+mysql-python库安装    https://www.cnblogs.com/lxt287994374/p/3910509.html
+                      https://www.cnblogs.com/loid/p/5950212.html
+
+Nginx+uwsgi+Flask应用 https://www.cnblogs.com/Ray-liang/p/4173923.html
+                      https://www.cnblogs.com/knarfeh/p/5616515.html
+					  http://python.jobbole.com/84286/
+					  https://www.cnblogs.com/hqutcy/p/7168730.html
+					  http://www.cnblogs.com/dspace/p/5647587.html
+										 
+supervisor部署		  https://www.izixia.cn/2016/01/03/supervisor-pei-zhi-guo-cheng/
+sudo killall uwsgi
+ps aux|grep uwsgi

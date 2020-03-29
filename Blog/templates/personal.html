@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}关于{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/personal.css') }}">
+{% endblock head %}
+
+{% block main %}
+
+
+    	<div class="entry-content" style="background-color: white;padding: 10px 80px " >
+			<div class="single-content">
+                <img class="personal" src="{{ url_for('static',filename="images/personal.jpg") }}" alt="" style="height: 780px;float: right" >
+				<p><span style="color: #3399cc; font-size: 18pt;"><strong>博主简介</strong></span></p>
+                <p><strong>CN：温毛</strong></p>
+                <p><strong>EN：Tatsumi</strong></p>
+                <p><strong>知识架构：网络爬虫 机器学习 文本挖掘 深度学习 大数据 
+                <p><strong>数据挖掘与机器学习旋涡中的搬运工</strong></p>
+                <p><strong>爱折腾 爱Debug 目前尝试各种数据科学项目（推荐系统、复杂网络）</strong></p>
+
+                <p><span style="color: #3399cc; font-size: 18pt;"><strong>2017成果</strong></span></p>
+                <p><strong>实际项目（潜客识别、流失预警、客户价值评估、产品推荐）深化理解各种挖掘算法并实现</strong></p>
+				<p><strong>学习HTML5、CSS</strong></p>
+				<p><strong>使用Python完成爬虫项目</strong></p>
+                <p><strong>Flask搭建个人博客</strong></p>
+				<p><strong>Git和Github的开通</strong></p>
+				<p><strong>Linux环境的深化学习</strong></p>
+                <p><strong>文本挖掘、推荐算法、社交网络分析等算法相关理论</strong></p>				
+
+                <p><span style="color: #3399cc; font-size: 18pt;"><strong>2018目标</strong></span></p>				
+                <p><strong>尝试搭建Hadoop和Spark框架</strong></p>
+                <p><strong>学习Scala</strong></p>
+                <p><strong>学习深度学习理论知识并实现Tenserflow完整项目（CNN、RNN）</strong></p>
+                <p><strong>实现文本挖掘、推荐算法、复杂网络完整流程项目</strong></p>
+
+                <p><span style="color: #3399cc; font-size: 18pt;"><strong>联系方式</strong></span></p>
+				<p><strong>QQ：<a>745447374</a></strong></p>
+				<p><strong>Github：<a href="https://github.com/tatsumiw">tatsumiw</a></strong></p>
+                <p><strong>邮箱：<a>745447374@qq.com</a></strong></p>
+                <p><strong>博客：<a href="http://www.wtatsumi.com">www.wtatsumi.com</a></strong></p>
+        </div>
+    </div>
+{% endblock %}

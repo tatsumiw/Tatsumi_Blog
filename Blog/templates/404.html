@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}页面不见啦{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+{% endblock head %}
+
+{% block baocuo %}
+    <h2>{{ baocuo }}</h2>
+{% endblock %}

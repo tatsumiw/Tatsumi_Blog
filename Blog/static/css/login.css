@@ -1,0 +1,16 @@
+.login{
+    background: #fff;
+    width:730px;
+    margin:0 auto;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.form-container{
+    width:300px;
+    margin: 0 auto;
+}
+
+.page-title{
+    text-align: center;
+}
